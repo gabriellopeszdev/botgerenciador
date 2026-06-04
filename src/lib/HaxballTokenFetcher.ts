@@ -7,8 +7,9 @@ puppeteerExtra.use(StealthPlugin());
 const HAXBALL_URL = 'https://www.haxball.com/headlesstoken';
 const TOKEN_REGEX = /thr\d?\.[A-Za-z0-9_.]{20,}/;
 
+const isDev = process.env.NODE_ENV !== 'production';
 function log(msg: string) {
-    console.log(`[TokenFetcher] ${new Date().toISOString()} ${msg}`);
+    if (isDev) console.log(`[TokenFetcher] ${new Date().toISOString()} ${msg}`);
 }
 
 export class HaxballTokenFetcher {
