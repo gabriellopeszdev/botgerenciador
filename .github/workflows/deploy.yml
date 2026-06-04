@@ -1,0 +1,36 @@
+name: Deploy em Produção
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Deploy via SSH
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Deploy no servidor
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: 72.61.37.230
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script_stop: true
+          script: |
+            set -e
+            cd /root/testeSalas
+
+            echo ">>> Atualizando código..."
+            git pull origin main
+
+            echo ">>> Rodando migrations..."
+            docker compose exec -T hax-bot npx prisma migrate deploy || true
+
+            echo ">>> Rebuild e restart dos containers..."
+            docker compose up -d --build hax-bot
+            docker compose up -d --build hax-web
+
+            echo ">>> Deploy concluído."

@@ -1,0 +1,54 @@
+services:
+
+  # ── Bot + Express + Puppeteer ────────────────────────────────────────────────
+  hax-bot:
+    build: .
+    container_name: salasHax
+    restart: unless-stopped
+    ports:
+      - "3002:3000"   # Express API + Socket.io (host:container)
+    volumes:
+      - ./bots:/app/bots
+    mem_limit: "1024m"
+    env_file:
+      - .env
+    networks:
+      - hax
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ── Painel Web (Next.js) ─────────────────────────────────────────────────────
+  hax-web:
+    build:
+      context: ./web
+      args:
+        # URL pública do socket — o navegador conecta diretamente aqui.
+        # Troque pelo IP/domínio do seu servidor.
+        NEXT_PUBLIC_SOCKET_URL: ${NEXT_PUBLIC_SOCKET_URL:-http://localhost:3002}
+    container_name: salasHax-web
+    restart: unless-stopped
+    ports:
+      - "3001:3001"   # Painel web (host:container)
+    environment:
+      # Chamadas server-side usam a rede Docker interna (sem passar pela internet)
+      API_URL: http://hax-bot:3000
+      NEXTAUTH_URL:        ${NEXTAUTH_URL:-http://localhost:3001}
+      NEXTAUTH_SECRET:     ${NEXTAUTH_SECRET}
+      INTERNAL_API_SECRET: ${INTERNAL_API_SECRET}
+    depends_on:
+      - hax-bot
+    mem_limit: "512m"
+    networks:
+      - hax
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  hax:
+    driver: bridge

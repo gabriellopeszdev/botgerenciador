@@ -1,0 +1,49 @@
+{
+  "name": "haxball",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "tsx watch index.ts",
+    "dev:safe": "tsx watch --watch-path ./src index.ts",
+    "build": "tsc --noEmit",
+    "start": "tsx index.ts",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^6.0.0",
+    "@prisma/client": "^6.0.0",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "discord.js": "^14.14.1",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.4.1",
+    "pg": "^8.13.0",
+    "puppeteer": "^22.0.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "socket.io": "^4.8.3",
+    "typescript": "^5.9.3",
+    "undici": "^6.23.0"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "overrides": {
+    "undici": "^6.23.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.3",
+    "@types/pg": "^8.11.0",
+    "@types/puppeteer": "^5.4.7",
+    "prisma": "^6.0.0",
+    "tsx": "^4.21.0"
+  }
+}

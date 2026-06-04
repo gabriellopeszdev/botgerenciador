@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/Users/lopee/OneDrive/Desktop/testeSalas/src -type f \\\\\\(-name *.ts -o -name *.json \\\\\\))",
+      "Bash(node *)",
+      "Bash(nc -zv 72.61.37.230 5432 -w 5)",
+      "Bash(timeout 5 bash -c \"echo > /dev/tcp/72.61.37.230/5432\")",
+      "Bash(npm list *)",
+      "Bash(mkdir -p \"C:/Users/lopee/OneDrive/Desktop/testeSalas/.claude/commands\")",
+      "Bash(cp \"C:/Users/lopee/.claude/commands/\"*.md \"C:/Users/lopee/OneDrive/Desktop/testeSalas/.claude/commands/\")",
+      "Bash(claude --version)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git commit *)",
+      "Bash(grep *)",
+      "Bash(git *)",
+      "PowerShell(cmd /c \"cd C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador && git status\")",
+      "PowerShell(cmd /c \"cd C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador && git rev-parse --show-toplevel\")",
+      "PowerShell(cmd /c \"cd C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador && git status && git diff --stat\")",
+      "PowerShell(cmd /c \"type C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git\")",
+      "PowerShell(cmd /c \"dir C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git\")",
+      "PowerShell(cmd /c \"dir C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git\\\\worktrees\")",
+      "PowerShell(cmd /c \"cd C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador && git worktree prune && git status\")",
+      "PowerShell(cmd /c \"rmdir /s /q C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git\\\\worktrees\\\\agent-a51e4e758bda7f35a && rmdir /s /q C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git\\\\worktrees\\\\agent-a581030ecd32944e2 && rmdir /s /q C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git\\\\worktrees\\\\agent-a862c301fbb7b138d\")",
+      "PowerShell(cmd /c \"dir C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git\\\\worktrees /a\")",
+      "PowerShell(cmd /c \"dir C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git /a /b\")",
+      "PowerShell(cmd /c \"dir C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git\\\\hooks /b\")",
+      "PowerShell(cmd /c \"git --git-dir=C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git --work-tree=C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador status 2>&1\")",
+      "PowerShell(cmd /c \"git --git-dir=C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git config --list 2>&1\")",
+      "PowerShell(cmd /c \"git --git-dir=C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git fsck 2>&1 | head -5\")",
+      "PowerShell(cmd /c \"dir C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git\\\\logs /b /s 2>&1 | findstr /i testesalas\")",
+      "PowerShell(cmd /c \"git config --global --list 2>&1 | findstr /i tesalas\")",
+      "PowerShell(cmd /c \"git --git-dir=C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git --work-tree=C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador -c core.worktree= status 2>&1\")",
+      "PowerShell(cmd /c \"dir C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador\\\\.git\\\\worktrees /a /s 2>&1\")",
+      "PowerShell($env:GIT_DIR; $env:GIT_WORK_TREE; $env:GIT_COMMON_DIR)",
+      "Bash(env)",
+      "PowerShell(cmd /c \"cd C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador && git init 2>&1\")",
+      "PowerShell(cmd /c \"cd C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\botgerenciador && git status 2>&1\")",
+      "PowerShell(cmd /c \"dir C:\\\\Users\\\\lopee\\\\OneDrive\\\\Desktop\\\\.git 2>&1\" ; cmd /c \"dir C:\\\\Users\\\\lopee\\\\OneDrive\\\\.git 2>&1\")"
+    ]
+  }
+}

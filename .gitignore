@@ -1,0 +1,41 @@
+# Dependências
+node_modules/
+dist/
+build/
+web/.next/
+
+# Segurança e Configurações Sensíveis
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+active_rooms.json
+
+# Puppeteer e Dados do Navegador
+# Ignora a pasta de dados do perfil do Chrome para não subir cache/cookies
+userdatadir/
+.cache/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+# Exceto páginas do Next.js que se chamam logs/
+!web/src/app/**/logs/
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Prisma (Caso você utilize o SQLite para testes locais)
+/prisma/*.db
+/prisma/*.db-journal
+
+# Docker (Caso use localmente)
+.docker/
+.claude/worktrees/*

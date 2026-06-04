@@ -1,0 +1,35 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": [
+    "node_modules",
+    "dist",
+    "*.json",
+    "*.lock",
+    "*.md"
+  ],
+  "words": [
+    "Haxball", "haxball", "headless", "puppeteer",
+    "sala", "salas", "dono", "dono", "botão",
+    "Representa", "gerenciada", "gerenciado", "pelo", "pelos",
+    "arquivo", "caminho", "absoluto", "preenchido", "após",
+    "entrada", "médio", "jogadores", "onde", "aberta",
+    "métricas", "servidor", "usado", "gráficos", "futuros",
+    "eventos", "específica", "ações", "realizadas", "usuários", "usuário",
+    "mascarado", "contexto",
+    "Insere", "associado", "desvinculado", "comando", "Retorna",
+    "últimos", "recente", "antigo", "mais",
+    "única", "conexão", "processo", "desenvolvimento", "vazamento",
+    "conexões", "recarregar",
+    "listar", "adicionar", "remover", "buscar",
+    "Aproveita", "atualizar", "gravação", "Grava",
+    "Alerta", "Carga", "servidor", "elevado", "Abrir", "pode", "causar",
+    "minutos", "alertas", "acima", "limite", "Enviando", "alerta",
+    "Ativas", "verifica", "cada", "COOLDOWN",
+    "Utilitário", "envia", "Enviando", "dono",
+    "sala", "está", "bloqueada", "apenas", "loga", "possível", "enviar",
+    "Forçando", "fechamento", "auto",
+    "futebol", "futsal", "FUTSAL", "Corno", "CORNOS", "Lendas", "Teste",
+    "modos", "Lendo", "salvos"
+  ]
+}
