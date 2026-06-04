@@ -30,7 +30,7 @@ export class HaxballTokenFetcher {
             );
             await page.setViewport({ width: 1280, height: 800 });
 
-            await page.goto(HAXBALL_URL, { waitUntil: 'networkidle2', timeout: 30_000 });
+            await page.goto(HAXBALL_URL, { waitUntil: 'networkidle2', timeout: 60_000 });
 
             if (apiKey) {
                 await this.solveWith2Captcha(page, apiKey);
