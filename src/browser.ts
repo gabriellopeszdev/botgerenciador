@@ -20,7 +20,6 @@ const ROOM_BROWSER_ARGS = [
     '--disable-dev-shm-usage',
     '--disable-gpu',
     '--no-zygote',
-    '--renderer-process-limit=1',
     '--js-flags=--max-old-space-size=256',
     // Anti-detecção
     '--disable-blink-features=AutomationControlled',
