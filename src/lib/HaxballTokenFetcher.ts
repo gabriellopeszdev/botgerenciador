@@ -66,7 +66,7 @@ export class HaxballTokenFetcher {
         // 1. Aguarda o reCAPTCHA carregar e extrai o sitekey
         await page.waitForFunction(
             () => !!document.querySelector('[data-sitekey]'),
-            { timeout: 15_000 },
+            { timeout: 30_000 },
         );
         const siteKey = await page.evaluate(
             () => (document.querySelector('[data-sitekey]') as HTMLElement | null)?.dataset.sitekey ?? null,
@@ -138,7 +138,7 @@ export class HaxballTokenFetcher {
         await page.waitForFunction(
             () => Array.from(document.querySelectorAll('iframe'))
                        .some(f => f.src.includes('recaptcha')),
-            { timeout: 15_000 },
+            { timeout: 30_000 },
         );
 
         const rcFrame = await this.waitForCheckboxFrame(page, 12_000);
